@@ -1,9 +1,17 @@
 <template>
     <div>
-        <input type="text" v-model="Title"/><br>
-        <input type="number" v-model.number="Amount"/><br>
-        <button v-if="Id == null" @click="add(Title, Amount)">追加</button>
-        <button v-else @click="upd(Id, Title, Amount)">変更</button>
+        <md-field>
+            <label>Service Name</label>
+            <md-input v-model="Title"></md-input>
+        </md-field>
+        <md-field>
+            <label>Amount</label>
+            <md-input v-model.number="Amount" type="number"></md-input>
+        </md-field>
+        <div id="button">
+            <md-button class="md-raised md-primary" v-if="Id == null" @click="add(Title, Amount)">ADD</md-button>
+            <md-button class="md-raised md-primary" v-else @click="upd(Id, Title, Amount)">UPDATE</md-button>
+        </div>
     </div>
 </template>
 
@@ -21,7 +29,7 @@ export default {
         return {
             Id: this.id,
             Title: this.title == null ? "": this.title,
-            Amount: this.amount == null ? 0: this.amount
+            Amount: this.amount
         }
     },
     methods: {
@@ -38,3 +46,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    #button {
+        text-align: center;
+    }
+</style>
