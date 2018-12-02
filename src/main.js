@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import { MdButton, MdCard, MdContent, MdIcon, MdField } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css' // This line here
 
 Vue.use(MdButton)
 Vue.use(MdCard)

@@ -9,8 +9,8 @@
             <md-input v-model.number="Amount" type="number"></md-input>
         </md-field>
         <div id="button">
-            <md-button class="md-raised" v-if="Id == null" @click="add(Title, Amount)">ADD</md-button>
-            <md-button class="md-raised" v-else @click="upd(Id, Title, Amount)">UPDATE</md-button>
+            <md-button class="md-raised md-primary" v-if="Id == null" @click="add(Title, Amount)">ADD</md-button>
+            <md-button class="md-raised md-primary" v-else @click="upd(Id, Title, Amount)">UPDATE</md-button>
         </div>
     </div>
 </template>
