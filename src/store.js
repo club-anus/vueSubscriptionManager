@@ -9,8 +9,6 @@ const SUBSCRIOTION_ADD = 'subscription_add'
 const SUBSCRIOTION_UPDATE = 'subscription_update'
 const SUBSCRIOTION_DELETE = 'subscription_delete'
 
-let subscriptionId = 0
-
 /* subscription の構造
 subscription {
   id : number,
@@ -19,7 +17,8 @@ subscription {
 }
 */
 const initialState = {
-  subscriptions: []
+  subscriptions: [],
+  subscriptionId: 1
 }
 
 export default new Vuex.Store({
@@ -27,19 +26,22 @@ export default new Vuex.Store({
   mutations: {
     [SUBSCRIOTION_ADD]: (state, { title, amount }) => {
       const subscription = {
-        id: subscriptionId++,
+        id: state.subscriptionId++,
         title,
         amount
       }
       state.subscriptions.push(subscription)
     },
     [SUBSCRIOTION_UPDATE]: (state, { id, title, amount }) => {
-      let selectedSubscription = state.subscriptions.filter(x => x.id === id)
-      selectedSubscription.title = title
-      selectedSubscription.amount = amount
+      state.subscriptions.forEach((val, idx, ary) => {
+        if (val.id === id) {
+          val.title = title
+          val.amount = amount
+        }
+      })
     },
     [SUBSCRIOTION_DELETE]: (state, id) => {
-      state = state.subscriptions.filter(x => x.id !== id)
+      state.subscriptions = state.subscriptions.filter(x => x.id !== id)
     }
   },
   actions: {
