@@ -1,13 +1,13 @@
 <template>
-    <ul>
-        <li v-for="item in list" v-bind:key="item.id">
-        <card 
-            :id="item.id"
-            :title="item.title"
-            :amount="item.amount"
-        />
-        </li>
-    </ul>
+    <md-content class="md-scrollbar">
+        <div v-for="item in list" v-bind:key="item.id">
+            <card 
+                :id="item.id"
+                :title="item.title"
+                :amount="item.amount"
+            />
+        </div>
+    </md-content>
 </template>
 
 <script>
@@ -25,3 +25,10 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .md-content {
+        max-height: 75vh;
+        overflow: auto;
+    }
+</style>
