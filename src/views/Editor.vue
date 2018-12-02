@@ -3,7 +3,7 @@
         <input type="text" v-model="Title"/><br>
         <input type="number" v-model="Amount" /><br>
         <button v-if="Id == null" @click="add({ title:Title, amount:Amount })">追加</button>
-        <button v-else @click="upd({ Id, Title, Amount })">変更</button>
+        <button v-else @click="upd({ id:Id, title:Title, amount:Amount })">変更</button>
     </div>
 </template>
 
