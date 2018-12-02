@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <ul>
+        <li v-for="item in list" v-bind:key="item.id">
         <card 
-            v-for="item in list" 
-            v-bind:key="item.id"
             :id="item.id"
             :title="item.title"
             :amount="item.amount"
         />
-    </div>
+        </li>
+    </ul>
 </template>
 
 <script>
