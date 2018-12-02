@@ -29,7 +29,7 @@ export default {
         return {
             Id: this.id,
             Title: this.title == null ? "": this.title,
-            Amount: this.amount == null ? 0: this.amount
+            Amount: this.amount
         }
     },
     methods: {
