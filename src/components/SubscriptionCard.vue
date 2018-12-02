@@ -20,9 +20,9 @@ export default {
         ...mapActions({
             del: 'subscriptionDel'
         }),
-        goToUpdate: (id, title, amount) => {
+        goToUpdate(id, title, amount) {
             const view = { name: 'edit', params: { id, title, amount }}
-            this.$route.push(view)
+            this.$router.push(view)
         }
     }
 }
