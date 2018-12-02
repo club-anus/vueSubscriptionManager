@@ -1,9 +1,17 @@
 <template>
     <div>
-        <div>{{title}}</div>
-        <div>{{amount}}円</div>
-        <button @click="goToUpdate(id, title, amount)">編集</button>
-        <button @click="del(id)">削除</button>
+        <md-card md-with-hover>
+            <md-card-header>
+                <div class="md-title">{{title}}</div>
+            </md-card-header>
+            <md-card-content>
+                <div class="md-title">{{amount}}円</div>
+            </md-card-content>
+            <md-card-actions>
+                <md-button class="md-primary" @click="goToUpdate(id, title, amount)">Edit</md-button>
+                <md-button class="md-accent" @click="del(id)">Delete</md-button>
+            </md-card-actions>
+        </md-card>
     </div>
 </template>
 
