@@ -1,5 +1,5 @@
 <template>
-    <md-card >
+    <md-card>
         <md-card-header>
             <div class="md-title">{{title}}</div>
         </md-card-header>
@@ -33,3 +33,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .md-card {
+        margin: 5vw;
+    }
+</style>
