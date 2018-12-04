@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="input">
         <md-field>
             <label>Service Name</label>
             <md-input v-model="Title"></md-input>
@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped>
+    #input {
+        padding: 10vw;
+    }
     #button {
         text-align: center;
     }
