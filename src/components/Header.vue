@@ -1,7 +1,10 @@
 <template>
     <div>
-        <div id="total" class="md-title">
-            TOTAL:{{total}}円
+        <div id="total">
+            <span class="md-helper-text">合計金額</span>
+            <div  class="md-title">
+                {{total.toLocaleString()}}円
+            </div>
         </div>
         <md-button id="add" class="md-fab md-raised md-primary" @click="goToCreateView()">
             <md-icon>add</md-icon>
@@ -32,14 +35,11 @@ export default {
         position: fixed;
         right: 0;
         bottom: 0;
-        margin-bottom: 3vh;
+        margin-bottom: 2vh;
         margin-right: 5vw;
     }
     #total {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        margin-left: 5vw;
-        margin-bottom: 5vh;
+        text-align: center;
+        padding-top: 1vh;
     }
 </style>

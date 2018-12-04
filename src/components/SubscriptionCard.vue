@@ -1,9 +1,11 @@
 <template>
     <md-card>
         <md-card-header>
+            <span class="md-helper-text">サービス名</span>
             <div class="md-title">{{title}}</div>
         </md-card-header>
         <md-card-content>
+            <span class="md-helper-text">課金額</span>
             <div class="md-title">{{amount}}円</div>
         </md-card-content>
         <md-card-actions>
