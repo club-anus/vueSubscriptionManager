@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
     .md-content {
-        height: 80vh;
+        height: 90vh;
         overflow: auto;
     }
 </style>
