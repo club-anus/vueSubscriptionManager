@@ -35,11 +35,11 @@ export default {
         position: fixed;
         right: 0;
         bottom: 0;
-        margin-bottom: 2vh;
+        margin-bottom: 1vh;
         margin-right: 5vw;
     }
     #total {
         text-align: center;
-        padding-top: 1vh;
+        padding-top: 2vh;
     }
 </style>
