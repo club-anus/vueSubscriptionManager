@@ -6,7 +6,7 @@
         </md-card-header>
         <md-card-content>
             <span class="md-helper-text">課金額</span>
-            <div class="md-title">{{amount}}円</div>
+            <div class="md-title">{{amount.toLocaleString()}}円</div>
         </md-card-content>
         <md-card-actions>
             <md-button class="md-primary" @click="goToUpdate(id, title, amount)">Edit</md-button>
