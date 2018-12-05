@@ -61,4 +61,8 @@ export default {
     .md-card {
         margin: 5vw;
     }
+    .md-dialog {
+        max-width: 60vw;
+        height: 25vh;
+    }
 </style>
